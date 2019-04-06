@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class PostAuthorView: UIView {
     var author: Author!
     let avatarView: SVGView = SVGView()
@@ -24,5 +25,20 @@ class PostAuthorView: UIView {
     }
     
     func setupView() {
+        
+        label.text = author.name
+        //avatarView.image =
+        label.backgroundColor = UIColor.purple
+        //avatarView.layer.cornerRadius = avatarView.frame.size.width / 2
+        self.addSubview(label)
+        //self.addSubview(avatarView)
+        
+        NSLayoutConstraint.activate([label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5), label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 5), label.topAnchor.constraint(equalTo: self.topAnchor, constant: 5), label.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 5)])
+        
+        
+        
+        
     }
+    
+   
 }
