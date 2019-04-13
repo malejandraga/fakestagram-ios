@@ -10,10 +10,21 @@ import UIKit
 
 class PostCollectionViewCell: UICollectionViewCell {
     public var post: Post!
+    
 
+    @IBOutlet weak var imagePost: UIImageView!
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var countLikesLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
+        
+        
     }
 
 }

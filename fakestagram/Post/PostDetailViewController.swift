@@ -10,8 +10,11 @@ import UIKit
 
 class PostDetailViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("PostDetailViewController")
 
         // Do any additional setup after loading the view.
     }
