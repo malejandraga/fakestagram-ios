@@ -17,7 +17,16 @@ enum Secrets {
         case .host:
             return "https://fakestagram-api.herokuapp.com/"
         case .uuid:
-            return nil
+            // return nil
+            print("Entre aqui...")
+            //print(UserDefaults.standard.string(forKey: "uuid"))
+            return UserDefaults.standard.string(forKey: "uuid")
+            
+//           if let id = UserDefaults.standard.string(forKey: "uuid") else {
+//                    return ""
+//                }
+//            return UserDefaults.standard.string(forKey: "uuid")
+            
         }
     }
 }
