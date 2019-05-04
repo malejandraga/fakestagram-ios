@@ -28,6 +28,11 @@ class CreatePostClient {
         return decoder
     }()
 
+    func create(title: String, imageData: String, succcess onSuccess: @escaping (Post) -> Void) {
+        let payload = CreatePostBase64(title: title, imageData: imageData)
+        create(payload: payload, succcess: onSuccess)
+    }
+
     func create(payload: CreatePostBase64, succcess: @escaping (Post) -> Void) {
         guard let data = try? encoder.encode(payload) else { return }
         client.request("POST", path: path, body: data, completionHandler: { (response, data) in

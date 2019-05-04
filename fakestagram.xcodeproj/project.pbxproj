@@ -17,6 +17,9 @@
 		E01DEDA3227CEDCC003AAE50 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DEDA2227CEDCC003AAE50 /* NotificationNames.swift */; };
 		E04FB2DC2249F2AB00B81C8A /* CodableStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04FB2DB2249F2AB00B81C8A /* CodableStorage.swift */; };
 		E04FB2DE2249F2D300B81C8A /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04FB2DD2249F2D300B81C8A /* StorageType.swift */; };
+		E06AA192227E106100931CD9 /* ProfilePostsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06AA191227E106100931CD9 /* ProfilePostsClient.swift */; };
+		E06AA197227E13B100931CD9 /* PostThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06AA195227E13B100931CD9 /* PostThumbnailCollectionViewCell.swift */; };
+		E06AA198227E13B100931CD9 /* PostThumbnailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E06AA196227E13B100931CD9 /* PostThumbnailCollectionViewCell.xib */; };
 		E07D9031226238C5004BCDE3 /* AccountClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07D9030226238C5004BCDE3 /* AccountClient.swift */; };
 		E07D903322623A00004BCDE3 /* TimelineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07D903222623A00004BCDE3 /* TimelineClient.swift */; };
 		E09480582274BDFB00EFC341 /* CreatePostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09480572274BDFB00EFC341 /* CreatePostClient.swift */; };
@@ -75,6 +78,9 @@
 		E01DEDA2227CEDCC003AAE50 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		E04FB2DB2249F2AB00B81C8A /* CodableStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableStorage.swift; sourceTree = "<group>"; };
 		E04FB2DD2249F2D300B81C8A /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
+		E06AA191227E106100931CD9 /* ProfilePostsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostsClient.swift; sourceTree = "<group>"; };
+		E06AA195227E13B100931CD9 /* PostThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
+		E06AA196227E13B100931CD9 /* PostThumbnailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostThumbnailCollectionViewCell.xib; sourceTree = "<group>"; };
 		E07D9030226238C5004BCDE3 /* AccountClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountClient.swift; sourceTree = "<group>"; };
 		E07D903222623A00004BCDE3 /* TimelineClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineClient.swift; sourceTree = "<group>"; };
 		E09480572274BDFB00EFC341 /* CreatePostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostClient.swift; sourceTree = "<group>"; };
@@ -142,7 +148,6 @@
 				47097B22468FF7B662FF3777 /* Pods-fakestagramTests.debug.xcconfig */,
 				7EA2AA10A7700704C7454B58 /* Pods-fakestagramTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -291,6 +296,9 @@
 			isa = PBXGroup;
 			children = (
 				E0F4B04122700427000975C0 /* ProfileViewController.swift */,
+				E06AA191227E106100931CD9 /* ProfilePostsClient.swift */,
+				E06AA195227E13B100931CD9 /* PostThumbnailCollectionViewCell.swift */,
+				E06AA196227E13B100931CD9 /* PostThumbnailCollectionViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -382,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0DDFA22223DFE73009EB136 /* PostCollectionViewCell.xib in Resources */,
+				E06AA198227E13B100931CD9 /* PostThumbnailCollectionViewCell.xib in Resources */,
 				E0BB9753223F5DFB00D028A1 /* Names.plist in Resources */,
 				E0DDF9FB223DF642009EB136 /* LaunchScreen.storyboard in Resources */,
 				E0DDFA32223E181C009EB136 /* PostDetailViewController.xib in Resources */,
@@ -477,6 +486,7 @@
 				E0DDFA29223E03DC009EB136 /* Author.swift in Sources */,
 				E0DDFA2B223E04A3009EB136 /* Identicon.swift in Sources */,
 				E0BB974F223F552B00D028A1 /* UIDevice+Info.swift in Sources */,
+				E06AA192227E106100931CD9 /* ProfilePostsClient.swift in Sources */,
 				E01AC9DB2273DE9000D5F13C /* Like.swift in Sources */,
 				E0BCD23922489DFB00B4E0F6 /* Status.swift in Sources */,
 				E0DDFA21223DFE73009EB136 /* PostCollectionViewCell.swift in Sources */,
@@ -489,6 +499,7 @@
 				E09CD7C62274A5CF007EB84A /* UIImage+base64.swift in Sources */,
 				E09CD7C42274A298007EB84A /* CameraViewController.swift in Sources */,
 				E0BCD23B22489E2300B4E0F6 /* HttpResponse.swift in Sources */,
+				E06AA197227E13B100931CD9 /* PostThumbnailCollectionViewCell.swift in Sources */,
 				E0F4B04222700427000975C0 /* ProfileViewController.swift in Sources */,
 				E01AC9D92273DCF200D5F13C /* LikeClient.swift in Sources */,
 				E0DDFA31223E181C009EB136 /* PostDetailViewController.swift in Sources */,

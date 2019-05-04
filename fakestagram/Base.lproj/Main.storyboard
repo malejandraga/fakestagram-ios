@@ -17,22 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="Lar-lz-tt1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBT-jU-YWy">
-                                <rect key="frame" x="20" y="308" width="335" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Oh Snap!"/>
-                                <connections>
-                                    <action selector="onTapSnap:" destination="0rS-E4-WRa" eventType="touchUpInside" id="thv-2p-Boh"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="JBT-jU-YWy" firstAttribute="leading" secondItem="SAo-UK-5Ng" secondAttribute="leading" constant="20" id="DKo-Eg-HxG"/>
-                            <constraint firstItem="JBT-jU-YWy" firstAttribute="centerY" secondItem="Lar-lz-tt1" secondAttribute="centerY" id="Jmb-VM-Gpx"/>
-                            <constraint firstItem="SAo-UK-5Ng" firstAttribute="trailing" secondItem="JBT-jU-YWy" secondAttribute="trailing" constant="20" id="fg5-Ob-FJh"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SAo-UK-5Ng"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Photo" image="camera" id="ygy-XD-3IH" userLabel="Create"/>
@@ -53,17 +38,17 @@
                                 <rect key="frame" x="0.0" y="141" width="375" height="477"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="90a-Dj-e17">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="119" height="122"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="postThumbnailCell" id="hNe-iV-wVI">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="119" height="122"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="122"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
@@ -92,6 +77,7 @@
                     <navigationItem key="navigationItem" title="Profile Name" id="g7K-02-Y1a"/>
                     <connections>
                         <outlet property="authorView" destination="5q0-Ap-zuW" id="rlW-2a-7Tn"/>
+                        <outlet property="previewPostsCollectionView" destination="iR7-wM-iiK" id="ndE-2U-OyL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oI-Up-tFT" userLabel="First Responder" sceneMemberID="firstResponder"/>

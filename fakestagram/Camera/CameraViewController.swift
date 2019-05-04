@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CameraViewController: UIViewController {
+
     let client = CreatePostClient()
 
     override func viewDidLoad() {
@@ -17,12 +19,10 @@ class CameraViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func onTapSnap(_ sender: Any) {
-        guard let img = UIImage(named: "PianoCat"),
-              let imgBase64 = img.encodedBase64() else { return }
-        let payload = CreatePostBase64(title: "PianoCat - \(Date().currentTimestamp())",
-            imageData: imgBase64)
-        client.create(payload: payload) { post in
+    func createPost(img: UIImage) {
+        guard let imgBase64 = img.encodedBase64() else { return }
+        let timestamp = Date().currentTimestamp()
+        client.create(title: String(timestamp), imageData: imgBase64) { post in
             print(post)
         }
     }
