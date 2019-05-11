@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct CreatePostBase64: Codable {
     let title: String
     let imageData: String
+    let latitude: Double?
+    let longitude: Double?
 }
 
 class CreatePostClient {
@@ -28,8 +31,8 @@ class CreatePostClient {
         return decoder
     }()
 
-    func create(title: String, imageData: String, succcess onSuccess: @escaping (Post) -> Void) {
-        let payload = CreatePostBase64(title: title, imageData: imageData)
+    func create(title: String, imageData: String, location: CLLocation?, succcess onSuccess: @escaping (Post) -> Void) {
+        let payload = CreatePostBase64(title: title, imageData: imageData, latitude: location?.coordinate.latitude, longitude: location?.coordinate.longitude)
         create(payload: payload, succcess: onSuccess)
     }
 

@@ -33,7 +33,7 @@ class PostCollectionViewCell: UICollectionViewCell {
             self?.imageView.image = img
         }
         authorView.author = post.author
-        titleLbl.text = post.title
+        titleLbl.text = "\(post.title)\n\(post.location)"
         likesCountLbl.text = post.likesCountText()
         commentsCountLbl.text = post.commentsCountText()
     }
