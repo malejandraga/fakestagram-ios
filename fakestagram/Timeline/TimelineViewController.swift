@@ -18,14 +18,26 @@ class TimelineViewController: UIViewController {
 
     var posts: [Post] = []
 
+    let loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 48, height: 48))
+        indicator.hidesWhenStopped = true
+        indicator.style = UIActivityIndicatorView.Style.gray
+        return indicator
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
         NotificationCenter.default.addObserver(self, selector: #selector(didLikePost(_:)), name: .didLikePost, object: nil)
         refreshControl.addTarget(self, action: #selector(self.reloadData), for: UIControl.Event.valueChanged)
 
+        loadingIndicator.center = self.view.center
+        loadingIndicator.startAnimating()
+        self.view.addSubview(loadingIndicator)
+
         client.show { [weak self] data in
             self?.posts = data
+            self?.loadingIndicator.stopAnimating()
             self?.postsCollectionView.reloadData()
         }
     }
@@ -78,6 +90,7 @@ class TimelineViewController: UIViewController {
             self?.postsCollectionView.reloadData()
         }
     }
+
 }
 
 extension TimelineViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

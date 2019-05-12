@@ -69,7 +69,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5q0-Ap-zuW" customClass="PostAuthorView" customModule="fakestagram" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5q0-Ap-zuW" customClass="PostAuthorView" customModule="fakestagram" customModuleProvider="target">
                                 <rect key="frame" x="5" y="68" width="365" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -82,9 +82,9 @@
                             <constraint firstItem="iR7-wM-iiK" firstAttribute="leading" secondItem="hc8-6h-JFA" secondAttribute="leading" id="9eq-wQ-kI8"/>
                             <constraint firstItem="hc8-6h-JFA" firstAttribute="trailing" secondItem="iR7-wM-iiK" secondAttribute="trailing" id="JRK-8P-kxS"/>
                             <constraint firstItem="hc8-6h-JFA" firstAttribute="bottom" secondItem="iR7-wM-iiK" secondAttribute="bottom" id="Xgq-h9-4Nd"/>
-                            <constraint firstItem="5q0-Ap-zuW" firstAttribute="top" secondItem="hc8-6h-JFA" secondAttribute="top" constant="5" id="Xy8-vq-f5F"/>
+                            <constraint firstItem="5q0-Ap-zuW" firstAttribute="top" secondItem="hc8-6h-JFA" secondAttribute="top" constant="4" id="Xy8-vq-f5F"/>
                             <constraint firstItem="hc8-6h-JFA" firstAttribute="trailing" secondItem="5q0-Ap-zuW" secondAttribute="trailing" constant="5" id="iyd-4r-0M5"/>
-                            <constraint firstItem="iR7-wM-iiK" firstAttribute="firstBaseline" secondItem="5q0-Ap-zuW" secondAttribute="baseline" constant="8" symbolType="layoutAnchor" id="jUM-wI-tzd"/>
+                            <constraint firstItem="iR7-wM-iiK" firstAttribute="firstBaseline" secondItem="5q0-Ap-zuW" secondAttribute="baseline" constant="9" id="jUM-wI-tzd"/>
                             <constraint firstItem="5q0-Ap-zuW" firstAttribute="leading" secondItem="hc8-6h-JFA" secondAttribute="leading" constant="5" id="tWp-H7-INU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hc8-6h-JFA"/>
