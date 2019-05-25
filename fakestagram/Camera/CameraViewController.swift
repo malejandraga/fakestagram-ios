@@ -31,9 +31,40 @@ class CameraViewController: UIViewController {
     }
 
     @IBAction func onTapCapture(_ sender: Any) {
-        print("posting....")
-        let img = UIImage(named: "church")!
-        createPost(img: img)
+//        print("posting....")
+//        let img = UIImage(named: "horse")!
+//        createPost(img: img)
+        choosePicture()
+    }
+    
+    func choosePicture() {
+        
+        let pickerController = UIImagePickerController()
+        
+        pickerController.allowsEditing = true
+        
+        pickerController.delegate = self
+        
+        
+        
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Camara", style: .default, handler: { (action) in
+            pickerController.sourceType = .camera
+            self.present(pickerController,animated: true, completion: nil)
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Biblioteca", style: .default, handler: { (action) in
+            pickerController.sourceType = .photoLibrary
+            //present(pickerController,animated: true, completion: nil)
+            self.present(pickerController,animated: true, completion: nil)
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        
+        present(actionSheet,animated: true, completion: nil)
+        
+        
     }
 
     func enableBasicLocationServices() {
@@ -73,4 +104,24 @@ extension CameraViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.currentLocation = locations.last
     }
+}
+
+
+extension CameraViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        guard let image = info[.editedImage] as? UIImage else { return }
+        
+        //imageView.image = image
+        createPost(img: image)
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
