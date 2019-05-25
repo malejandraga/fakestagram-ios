@@ -38,33 +38,25 @@ class CameraViewController: UIViewController {
     }
     
     func choosePicture() {
-        
         let pickerController = UIImagePickerController()
-        
         pickerController.allowsEditing = true
-        
         pickerController.delegate = self
-        
-        
-        
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        actionSheet.addAction(UIAlertAction(title: "Camara", style: .default, handler: { (action) in
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
             pickerController.sourceType = .camera
             self.present(pickerController,animated: true, completion: nil)
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Biblioteca", style: .default, handler: { (action) in
+        actionSheet.addAction(UIAlertAction(title: "Library", style: .default, handler: { (action) in
             pickerController.sourceType = .photoLibrary
             //present(pickerController,animated: true, completion: nil)
             self.present(pickerController,animated: true, completion: nil)
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         present(actionSheet,animated: true, completion: nil)
-        
-        
     }
 
     func enableBasicLocationServices() {
@@ -114,14 +106,9 @@ extension CameraViewController: UIImagePickerControllerDelegate, UINavigationCon
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
         guard let image = info[.editedImage] as? UIImage else { return }
-        
         //imageView.image = image
         createPost(img: image)
-        
         picker.dismiss(animated: true, completion: nil)
     }
-    
-    
 }
